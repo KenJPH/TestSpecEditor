@@ -1,13 +1,12 @@
-package API.InputOutput;
+package API.dto;
 
-public class IO {
+public class Token {
 
     private String word;
 
-    public IO(){};
+    public Token(){};
 
-
-    public IO(String word) {
+    public Token(String word) {
         this.word = word;
     }
 
