@@ -1,7 +1,7 @@
-package API.Controller;
+package API.controller;
 
-import API.DataTransferObjects.Token;
-import API.Service.TokenService;
+import API.dto.Token;
+import API.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,4 +25,7 @@ public class TokenController {
     public void addWord(@RequestBody Token word) {
         TokenService.addWord(word);
     }
+
+
+
 }

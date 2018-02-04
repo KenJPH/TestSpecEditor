@@ -1,7 +1,7 @@
-package API.Service;
+package API.service;
 
 
-import API.DataTransferObjects.Token;
+import API.dto.Token;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -18,8 +18,9 @@ public class TokenService {
         return words;
     }
 
+
+    // add word to list of words
     public void addWord(Token word) {
-        // add word to list of words
         words.add(word);
     }
 }

@@ -1,4 +1,4 @@
-package API.DataTransferObjects;
+package API.dto;
 
 public class Token {
 
