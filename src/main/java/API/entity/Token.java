@@ -1,4 +1,5 @@
-package API.dto;
+package API.entity;
+
 
 public class Token {
 
@@ -17,4 +18,6 @@ public class Token {
     public String getWord() {
         return word;
     }
+
+
 }

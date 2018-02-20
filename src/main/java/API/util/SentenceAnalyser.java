@@ -5,19 +5,8 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.Map;
 
-@Service
+
 public class SentenceAnalyser {
-
-    String objectNoun;
-    String subjectNoun;
-    String verb;
-    String preposition;
-    String determiner;
-
-    String[] array = {"Given", "user", "navigates", "website"};
-    String[] array1 = {"When", "user", "searches", "name"};
-    String[] array2 = {"And", "user", "presses", "search"};
-    String[] array3 = {"Then", "user", "see", "results"};
 
 
     /**
@@ -29,13 +18,7 @@ public class SentenceAnalyser {
      * @return
      */
     public boolean validate(String[] sentence) {
-        for (int i = 0; i < sentence.length; i++) {
-            if (sentence[0] == "Given" || sentence[0] == "When" || sentence[0] == "And" || sentence[0] == "Then") {
-                if (sentence[1] != objectNoun && sentence[2] != verb && sentence[3] != subjectNoun) {
-                    return false;
-                }
-            }
-        }
+
         return true;
     }
 
@@ -50,8 +33,6 @@ public class SentenceAnalyser {
      * @return
      */
     public Map<String, String[]> lookahead(String word) {
-        Map<String, String[]> tmp = new HashMap<>();
-
 
         return null;
     }

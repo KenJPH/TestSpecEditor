@@ -1,6 +1,7 @@
 package API.dto;
 
 import API.entity.Token;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -8,9 +9,10 @@ import java.util.*;
 @Repository
 public class TokenDTO {
 
-    private List<Token> inputTokens = new ArrayList<>();
-    private Map<String, Set<String>> wordCat;
+    private Token token;
 
+    private List<Token> inputTokens = new ArrayList<>();
+    private Map<Integer, Token> posWord;
 
 //    private List<Token> tokens = new ArrayList<>(Arrays.asList(
 //            new Token(1, "user"),
@@ -33,8 +35,8 @@ public class TokenDTO {
     }
 
     public void addSentence(List<Token> sentence) {
-        for (Token t : sentence) {
-            inputTokens.add(t);
+        for (int i = 1 ; i < sentence.size() + 1; i++) {
+            posWord.put(i, sentence.get(i));
         }
     }
 
