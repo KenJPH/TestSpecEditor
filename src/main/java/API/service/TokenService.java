@@ -33,7 +33,14 @@ public class TokenService {
         tokenDTO.addSentence(sentence);
     }
 
-    public boolean validate(List<String> sentence) {
+
+    public Map<Integer,Token> posTokenMap() {
+        return tokenDTO.posTokenMap();
+    }
+
+
+    public boolean validate(List<Token> sentence) {
         return tokenDTO.validate(sentence);
     }
+
 }
