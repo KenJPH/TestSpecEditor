@@ -40,6 +40,7 @@ public class TokenController {
         return tokenService.getSentence();
     }
 
+
     // get map of <position, token>
     @RequestMapping(method = RequestMethod.GET, value = "/map1")
     public Map<Integer, Token> posTokenMap() {
