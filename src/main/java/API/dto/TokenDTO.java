@@ -1,6 +1,7 @@
 package API.dto;
 
 import API.entity.Token;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -10,7 +11,7 @@ public class TokenDTO {
 
     private List<Token> inputTokens = new ArrayList<>();
     private Map<Integer, Token> positionToken = new HashMap<>();
-    private Map<Token, List<String>> lexCat;
+    private Token token;
 //    private List<Token> tokens = new ArrayList<>(Arrays.asList(
 //            new Token(1, "user"),
 //            new Token(2, "navigates"),
@@ -51,7 +52,7 @@ public class TokenDTO {
     }
 
 
+    public void categoriseWord(ResourceLoader rl) {
 
-
-
+    }
 }

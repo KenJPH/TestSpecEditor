@@ -3,18 +3,24 @@ package API.controller;
 import API.entity.Token;
 import API.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @RestController
 public class TokenController {
 
     @Autowired
     private TokenService tokenService;
+
+    @Autowired
+    private ResourceLoader rl;
+
 //
 //    // get list of brute words list
 //    @RequestMapping(method = RequestMethod.GET, value = "/brutewords")
@@ -45,6 +51,11 @@ public class TokenController {
     @RequestMapping(method = RequestMethod.GET, value = "/map1")
     public Map<Integer, Token> posTokenMap() {
         return tokenService.posTokenMap();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/x")
+    public Map<String, Set<String>> categoriseWord(Resource file) {
+        tokenService.categoriseWord(rl);
     }
 
 
