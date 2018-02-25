@@ -1,0 +1,12 @@
+screen
+clock
+website
+button
+mouse
+page
+man
+dog
+desk
+icon
+something
+it
