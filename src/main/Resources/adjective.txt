@@ -1,0 +1,10 @@
+black
+large
+small
+fast
+coloured
+outlined
+big
+running
+stopping
+tidy

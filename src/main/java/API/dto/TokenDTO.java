@@ -18,11 +18,7 @@ public class TokenDTO {
             new Token("drive"),
             new Token("ran")
     ));
-    private List<Token> adjectives = new ArrayList<>(Arrays.asList(
-            new Token("smart"),
-            new Token("fast"),
-            new Token("dumb")
-    ));
+
     private List<Token> adverbs = new ArrayList<>(Arrays.asList(
             new Token("quickly"),
             new Token("smoothly")
@@ -32,10 +28,18 @@ public class TokenDTO {
             new Token("he"),
             new Token("us")
     ));
-    private List<Token> determiners = new ArrayList<>(Arrays.asList(
-            new Token("the"),
-            new Token("a")
+
+    private List<String> dets = new ArrayList<>(Arrays.asList(
+            "the",
+            "a"
     ));
+    private List<String> adjectives = new ArrayList<>(Arrays.asList(
+            "smart",
+            "fast",
+            "dumb"
+    ));
+
+
     private List<Token> conjunctions = new ArrayList<>(Arrays.asList(
             new Token("and"),
             new Token("but")
@@ -50,20 +54,9 @@ public class TokenDTO {
     private List<Token> inputTokens = new ArrayList<>();
     private Map<Integer, Token> positionToken = new HashMap<>();
 
-    private Map<String, List<Token>> lexCat = new HashMap<>() {
-            {
-                put("noun", nouns);
-                put("verb", verbs);
-                put("adjective", adjectives);
-                put("adverb", adverbs);
-                put("pronoun", pronouns);
-                put("determiner", determiners);
-                put("conjunction", conjunctions);
-                put("preposition", prepositions);
 
-            }
-        };
 
+    private Map<Token, List<String>> lexCat;
 //    private List<Token> tokens = new ArrayList<>(Arrays.asList(
 //            new Token(1, "user"),
 //            new Token(2, "navigates"),
@@ -93,21 +86,26 @@ public class TokenDTO {
 
     public Map<Integer, Token> posTokenMap() {
         for (int i = 0; i < inputTokens.size(); i++){
-            positionToken.put(i + 1, inputTokens.get(i));
+            positionToken.put(i+1, inputTokens.get(i));
         }
         return positionToken;
     }
 
 
     public boolean validate(List<Token> inputTokens) {
-        for (int i = 0; i < inputTokens.size(); i++) {
-            if (inputTokens.get(i+1).getPos() == 1 && (inputTokens.get(i+2).getWord()).equals(determiners.get(i))) {   System.out.println("i is: " +i);
-                inputTokens.get(i+1).getPos()
+        for (int i = 0; i <  inputTokens.size(); i++){
+            boolean flag;
+            if (inputTokens.get(i).getPos() == 1 && dets.contains(inputTokens.get(i).getWord())){
+                inputTokens.get(i).setCat("determiners");
 
             }
+
         }
+
         return true;
     }
+
+
 
 
 

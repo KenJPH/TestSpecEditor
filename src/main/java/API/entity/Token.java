@@ -9,7 +9,7 @@ public class Token {
 
     private int pos;
     private String word;
-    private Map<String, List<Token>> cat;
+    private String cat;
 
     public Token(){};
 
@@ -17,12 +17,7 @@ public class Token {
         this.word = word;
     }
 
-    public Token(int pos, String word) {
-        this.pos = pos;
-        this.word = word;
-    }
-
-    public Token(int pos, String word, Map<String, List<Token>> cat) {
+    public Token(int pos, String word, String cat) {
         this.pos = pos;
         this.word = word;
         this.cat = cat;
@@ -36,7 +31,6 @@ public class Token {
         return word;
     }
 
-
     public int getPos() {
         return pos;
     }
@@ -45,11 +39,12 @@ public class Token {
         this.pos = pos;
     }
 
-    public Map<String, List<Token>> getCat() {
+    public String getCat() {
         return cat;
     }
 
-    public void setCat(Map<String, List<Token>> cat) {
+    public void setCat(String cat) {
         this.cat = cat;
     }
+//
 }
