@@ -4,6 +4,7 @@ package API.service;
 import API.dto.TokenDTO;
 import API.entity.Token;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -43,4 +44,7 @@ public class TokenService {
         return tokenDTO.validate(sentence);
     }
 
+    public void categoriseWord(ResourceLoader rl) {
+        tokenDTO.categoriseWord(rl);
+    }
 }

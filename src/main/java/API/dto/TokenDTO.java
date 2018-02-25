@@ -1,6 +1,7 @@
 package API.dto;
 
 import API.entity.Token;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -8,55 +9,9 @@ import java.util.*;
 @Repository
 public class TokenDTO {
 
-    private List<Token> nouns = new ArrayList<>(Arrays.asList(
-            new Token("user"),
-            new Token("cars"),
-            new Token("man")
-    ));
-    private List<Token> verbs = new ArrayList<>(Arrays.asList(
-            new Token("navigates"),
-            new Token("drive"),
-            new Token("ran")
-    ));
-
-    private List<Token> adverbs = new ArrayList<>(Arrays.asList(
-            new Token("quickly"),
-            new Token("smoothly")
-    ));
-    private List<Token> pronouns = new ArrayList<>(Arrays.asList(
-            new Token("i"),
-            new Token("he"),
-            new Token("us")
-    ));
-
-    private List<String> dets = new ArrayList<>(Arrays.asList(
-            "the",
-            "a"
-    ));
-    private List<String> adjectives = new ArrayList<>(Arrays.asList(
-            "smart",
-            "fast",
-            "dumb"
-    ));
-
-
-    private List<Token> conjunctions = new ArrayList<>(Arrays.asList(
-            new Token("and"),
-            new Token("but")
-    ));
-    private List<Token> prepositions = new ArrayList<>(Arrays.asList(
-            new Token("to"),
-            new Token("in"),
-            new Token("on")
-    ));
-
-
     private List<Token> inputTokens = new ArrayList<>();
     private Map<Integer, Token> positionToken = new HashMap<>();
-
-
-
-    private Map<Token, List<String>> lexCat;
+    private Token token;
 //    private List<Token> tokens = new ArrayList<>(Arrays.asList(
 //            new Token(1, "user"),
 //            new Token(2, "navigates"),
@@ -93,20 +48,11 @@ public class TokenDTO {
 
 
     public boolean validate(List<Token> inputTokens) {
-        for (int i = 0; i <  inputTokens.size(); i++){
-            boolean flag;
-            if (inputTokens.get(i).getPos() == 1 && dets.contains(inputTokens.get(i).getWord())){
-                inputTokens.get(i).setCat("determiners");
-
-            }
-
-        }
-
         return true;
     }
 
 
+    public void categoriseWord(ResourceLoader rl) {
 
-
-
+    }
 }
