@@ -1,0 +1,85 @@
+dict:
+  adjective:
+    - black
+    - large
+    - small
+    - fast
+    - coloured
+    - outlined
+    - big
+    - running
+    - stopping
+    - tidy
+  adverb:
+    - quickly
+    - nearly
+    - merely
+    - dearly
+    - clearly
+  conjunction:
+    - and
+    - because
+    - but
+    - for
+    - if
+    - or
+    - when
+    - until
+  determiner:
+    - the
+    - a
+    - an
+    - this
+    - every
+    - those
+    - many
+    - my
+    - your
+    - his
+  noun:
+    - screen
+    - clock
+    - website
+    - button
+    - mouse
+    - page
+    - man
+    - dog
+    - desk
+    - icon
+    - something
+    - it
+  preposition:
+    - after
+    - in
+    - to
+    - on
+    - with
+    - between
+    - over
+    - by
+    - without
+    - at
+  pronoun:
+    - i
+    - me
+    - they
+    - that
+    - something
+    - it
+    - me
+    - you
+    - yours
+    - we
+  verb:
+    - navigate
+    - am
+    - be
+    - stopping
+    - change
+    - click
+    - press
+    - search
+    - walk
+    - running
+
