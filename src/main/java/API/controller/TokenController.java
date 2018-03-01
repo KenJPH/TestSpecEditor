@@ -3,14 +3,9 @@ package API.controller;
 import API.entity.Token;
 import API.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 public class TokenController {
@@ -18,10 +13,6 @@ public class TokenController {
     @Autowired
     private TokenService tokenService;
 
-    @Autowired
-    private ResourceLoader rl;
-
-//
 //    // get list of brute words list
 //    @RequestMapping(method = RequestMethod.GET, value = "/brutewords")
 //    public List<Token> getBruteWords() {
@@ -33,6 +24,12 @@ public class TokenController {
 //    public void addWord(@RequestBody Token token) {
 //        tokenService.addWord(token);
 //    }
+
+//    @RequestMapping(method = RequestMethod.GET, value = "/file")
+//    public List<Token> fileToToken(){
+//        return tokenService.fileToToken();
+//    }
+
 
     // add list of words
     @RequestMapping(method = RequestMethod.POST, value = "/words")
@@ -52,24 +49,6 @@ public class TokenController {
     public Map<Integer, Token> posTokenMap() {
         return tokenService.posTokenMap();
     }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/x")
-    public Map<String, Set<String>> categoriseWord(Resource file) {
-        tokenService.categoriseWord(rl);
-    }
-
-
-    /**
-     * Validates the correctness of a sentences syntax
-     *
-     * @param sentence
-     * @return
-     */
-    @RequestMapping(method = RequestMethod.POST, value = "/validate")
-    public boolean validate(@RequestBody List<Token> sentence) {
-        return tokenService.validate(sentence);
-    }
-
 
 
 
