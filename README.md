@@ -1,6 +1,6 @@
 # TestSpecEditor
 
-This contains the source code of an API for TestSpecEditor, a predictive text editor built using Spring Boot for test specifications.
+This contains the source code for the TestSpecEditor project, which is a predictive text editor for generating test specifications.
 It generates lookahead data given a sequence of words.
 
 ## Purpose
