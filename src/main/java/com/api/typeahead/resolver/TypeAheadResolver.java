@@ -1,7 +1,7 @@
-package API.resolver;
+package com.api.typeahead.resolver;
 
-import API.dto.ResponseDto;
-import API.dto.Token;
+import com.api.typeahead.dto.ResponseDto;
+import com.api.typeahead.dto.Token;
 
 import java.util.List;
 import java.util.Map;

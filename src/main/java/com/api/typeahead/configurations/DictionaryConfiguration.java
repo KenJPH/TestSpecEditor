@@ -1,4 +1,4 @@
-package API.configurations;
+package com.api.typeahead.configurations;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

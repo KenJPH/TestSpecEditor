@@ -1,10 +1,10 @@
-package API.service;
+package com.api.typeahead.service;
 
-import API.configurations.DictionaryConfiguration;
-import API.dto.ResponseDto;
-import API.dto.Token;
-import API.resolver.TypeAheadResolver;
-import API.resolver.TypeAheadResolverBasic;
+import com.api.typeahead.configurations.DictionaryConfiguration;
+import com.api.typeahead.dto.ResponseDto;
+import com.api.typeahead.dto.Token;
+import com.api.typeahead.resolver.TypeAheadResolver;
+import com.api.typeahead.resolver.TypeAheadResolverBasic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package API.dto;
+package com.api.typeahead.dto;
 
 import java.util.List;
 

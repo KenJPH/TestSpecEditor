@@ -1,9 +1,9 @@
-package API.controller;
+package com.api.typeahead.controller;
 
-import API.dto.TokenWrapper;
-import API.dto.ResponseDto;
-import API.dto.Token;
-import API.service.TypeAheadService;
+import com.api.typeahead.dto.TokenWrapper;
+import com.api.typeahead.dto.ResponseDto;
+import com.api.typeahead.dto.Token;
+import com.api.typeahead.service.TypeAheadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
