@@ -12,6 +12,8 @@ public class TypeAheadResolverBasic extends TypeAheadResolver {
      * Resolves the next available categories and their corresponding words
      * which is syntactically correct based on the _____ theory.
      *
+     * For this basic approach, we only consider the last token.
+     *
      * @param tokens
      * @param dictionary
      * @return A list of categories and their corresponding words to make it syntactically correct
