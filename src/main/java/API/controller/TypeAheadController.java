@@ -17,7 +17,7 @@ public class TypeAheadController {
     @Autowired
     private TypeAheadService typeAheadService;
 
-    @PostMapping(value = "/words", consumes="application/json",produces="application/json")
+    @PostMapping(value = "/resolve", consumes="application/json", produces="application/json")
     public ResponseDto getWords(@RequestBody TokenWrapper tokenWrapper) {
         List<Token> tokens = tokenWrapper.getTokens();
         return typeAheadService.getWords(tokens);
