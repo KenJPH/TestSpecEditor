@@ -16,7 +16,7 @@ public class DictionaryConfiguration {
     private Map<String, List<String>> dict = new HashMap<>();
 
     public Map<String, List<String>> getDict() {
-        return dict;
+            return dict;
     }
 
 }

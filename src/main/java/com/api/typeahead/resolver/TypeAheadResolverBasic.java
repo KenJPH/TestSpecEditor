@@ -22,4 +22,14 @@ public class TypeAheadResolverBasic extends TypeAheadResolver {
     public ResponseDto getTypeAheadData(List<Token> tokens, Map<String, List<String>> dictionary) {
         return null;
     }
+
+    private String getCategory(String word) {
+        return "";
+    }
+
+
+
+
+
+
 }
